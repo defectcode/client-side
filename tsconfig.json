@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/crowdfunding/components/mobile/Share/ShareButton.jsx",
+    "src/app/crowdfunding/components/hooks/useSticky.jsx",
+    "src/app/crowdfunding/components/hooks/useViewport.jsx",
+    "src/app/crowdfunding/page.tsx", "src/app/crowdfunding/HeaderCrowdfundingMobile.jsx", "src/components/layouts/main-layout/header/header-menu/header-cart/cart-item/PayPalButton.jsx", "src/components/layouts/main-layout/header/header-menu/header-cart/cart-item/PayPalButton.jsx", "src/app/components/Header/components/Payment/SupportForm.tsx", "src/app/(root)/product/[id]/components/Progres.tsx", "src/app/(root)/product/[id]/components/hooks/useCountdownTimer.jsx", "src/app/(root)/product/[id]/components/components/Overview/components/StageDescriptionMobile.jsx",
+  ],
+  "exclude": ["node_modules"]
+}
