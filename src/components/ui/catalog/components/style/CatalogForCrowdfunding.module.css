@@ -1,0 +1,171 @@
+.container {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto 2.5rem auto;
+	background-color: #F9F9F9;
+}
+
+
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5rem 0 1.25rem 0;
+}
+
+.headerLeft {
+	display: flex;
+	align-items: center; 
+	gap: 1.25rem;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 600;
+	font-family: 'Heebo', sans-serif;
+}
+
+.button {
+	border: 1px solid transparent;
+	height: 36px;
+	width: 116px;
+	border-radius: 10px;
+	background-color: rgba(161, 161, 161, 0.1);
+	color: #1e1e1e;
+	cursor: pointer;
+}
+
+.button:hover {
+	text-decoration: underline;
+}
+
+.arrowContainer {
+	display: flex;
+	gap: 20px;
+}
+
+.arrow {
+	border: 1px solid transparent;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: rgba(161, 161, 161, 0.1);
+}
+
+.arrow.rotate {
+	transform: rotate(90deg);
+}
+
+.productContainer {
+	display: flex;
+	gap: 20px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	cursor: grab;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	margin-right: calc(-50vw + 50%);
+}
+
+.productContainer::-webkit-scrollbar {
+	display: none; 
+}
+
+.productCard {
+	flex: 0 0 calc(100% / 4.5 - 20px); 
+	max-width: calc(100% / 3.5 - 20px);
+}
+
+.productWrapper {
+	position: relative;
+	max-width: 1400px;
+	width: 100%;
+	background-color: #F9F9F9;
+	margin: 0 auto;
+}
+
+
+@media (max-width: 1270px) {
+	.productCard {
+		flex: 0 0 calc(100% / 3.5 - 20px); 
+		max-width: calc(100% / 2.5 - 20px);
+	}
+
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 920px) {
+	.productCard {
+		flex: 0 0 calc(100% / 3 - 20px); 
+		max-width: calc(100% / 2 - 20px);
+	}
+}
+
+  
+@media (max-width: 768px) {
+
+	.container {
+		background-color: #F9F9F9;
+
+	}
+
+	.productCard img {
+		height: 499.81px;
+		object-fit: cover;
+		width: 350px;
+	  }
+
+	.productContainer {
+	  gap: 30px; 
+	  padding: 0 16px;
+	  overflow-x: scroll;
+	  scroll-snap-type: x mandatory;
+	}
+	.arrowContainer {
+		display: none; 
+	}
+  
+	.productCard {
+	  flex: 0 0 95%;
+	  max-width: 350px;
+	  scroll-snap-align: center;
+	}
+  
+
+	.button {
+		display: none;
+	}
+
+	.title {
+	  display: none;
+	}
+
+
+	.paginationDots {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		margin-bottom: 40px;
+		gap: 12px;
+	  }
+	  
+	  .dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #949494;
+		transition: background-color 0.3s ease;
+	  }
+	  
+	  .dot.active {
+		background-color: #FFFFFF;
+	  }
+	  
+}
