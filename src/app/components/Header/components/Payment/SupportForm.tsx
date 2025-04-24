@@ -199,11 +199,22 @@ const SupportForm: React.FC<SupportFormProps> = ({ product, onDonationSuccess })
             <PaymentRequestButtonElement options={{ paymentRequest }} />
           </div>
         )} */}
-
-                {paymentMethod === 'stripe' && (
+{/* 
+        {paymentMethod === 'stripe' && (
           <div className="flex justify-center items-end h-[48px]">
             <CheckoutButton amount={amount} onSuccess={undefined} />
           </div>
+        )} */}
+
+        {paymentMethod === 'stripe' && (
+          <div className="flex justify-center items-end h-[48px]">
+    <CardElement />
+    <button
+      className="w-full h-[45px] bg-black text-white rounded-xl font-bold mt-4"
+      onClick={handleStripePayment}
+    >
+      Gift Now
+    </button>          </div>
         )}
 
         {paymentMethod === 'card' && (
