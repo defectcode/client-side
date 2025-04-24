@@ -208,13 +208,14 @@ const SupportForm: React.FC<SupportFormProps> = ({ product, onDonationSuccess })
 
         {paymentMethod === 'stripe' && (
           <div className="flex justify-center items-end h-[48px]">
-    <CardElement />
-    <button
-      className="w-full h-[45px] bg-black text-white rounded-xl font-bold mt-4"
-      onClick={handleStripePayment}
-    >
-      Gift Now
-    </button>          </div>
+            <CardElement />
+            <button
+              className="w-full h-[45px] bg-black text-white rounded-xl font-bold mt-4"
+              onClick={handleStripePayment}
+            >
+              Gift Now
+            </button>          
+          </div>
         )}
 
         {paymentMethod === 'card' && (
