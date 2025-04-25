@@ -1,6 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(root)/page": "app/(root)/page.js",
-  "/(root)/explorer/page": "app/(root)/explorer/page.js",
-  "/(root)/product/[id]/page": "app/(root)/product/[id]/page.js"
-}
